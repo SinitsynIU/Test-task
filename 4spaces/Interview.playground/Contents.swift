@@ -43,16 +43,10 @@ protocol Shop {
 // TODO: your implementation goes here
 class ShopImpl: Shop {
     
-    var products: [Product] = []
+    var products: Set<Product> = []
     
     func addNewProduct(product: Product) -> Bool {
-        for i in 0..<products.count {
-            if products[i].id == product.id {
-                return false
-            }
-        }
-        products.append(product)
-        return true
+        products.insert(product).inserted
     }
     
     func deleteProduct(id: String) -> Bool {
