@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4899223C28C1A27E000BACC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899223B28C1A27E000BACC6 /* AppDelegate.swift */; };
+		4899223E28C1A27E000BACC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899223D28C1A27E000BACC6 /* SceneDelegate.swift */; };
+		4899224028C1A27E000BACC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899223F28C1A27E000BACC6 /* ViewController.swift */; };
+		4899224328C1A27E000BACC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4899224128C1A27E000BACC6 /* Main.storyboard */; };
+		4899224528C1A280000BACC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4899224428C1A280000BACC6 /* Assets.xcassets */; };
+		4899224828C1A280000BACC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4899224628C1A280000BACC6 /* LaunchScreen.storyboard */; };
+		4899225228C1A305000BACC6 /* MobileStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899225128C1A305000BACC6 /* MobileStorageProtocol.swift */; };
+		4899225528C1A9C0000BACC6 /* MobileBD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4899225328C1A9C0000BACC6 /* MobileBD.xcdatamodeld */; };
+		4899225828C1AB34000BACC6 /* MobileBD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899225628C1AB34000BACC6 /* MobileBD+CoreDataClass.swift */; };
+		4899225928C1AB34000BACC6 /* MobileBD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899225728C1AB34000BACC6 /* MobileBD+CoreDataProperties.swift */; };
+		4899225E28C1AF9A000BACC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899225D28C1AF9A000BACC6 /* CoreDataManager.swift */; };
+		4899226328C5FF62000BACC6 /* MobileError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899226228C5FF62000BACC6 /* MobileError.swift */; };
+		4899226728C753B7000BACC6 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4899226628C753B7000BACC6 /* Mobile.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4899223828C1A27E000BACC6 /* Exitek iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exitek iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4899223B28C1A27E000BACC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4899223D28C1A27E000BACC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4899223F28C1A27E000BACC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4899224228C1A27E000BACC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4899224428C1A280000BACC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4899224728C1A280000BACC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4899224928C1A280000BACC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4899225128C1A305000BACC6 /* MobileStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileStorageProtocol.swift; sourceTree = "<group>"; };
+		4899225428C1A9C0000BACC6 /* MobileStorageBD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileStorageBD.xcdatamodel; sourceTree = "<group>"; };
+		4899225628C1AB34000BACC6 /* MobileBD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MobileBD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4899225728C1AB34000BACC6 /* MobileBD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MobileBD+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4899225D28C1AF9A000BACC6 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4899226228C5FF62000BACC6 /* MobileError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileError.swift; sourceTree = "<group>"; };
+		4899226628C753B7000BACC6 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mobile.swift; path = ../../../../../../.Trash/Mobile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4899223528C1A27E000BACC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4899222F28C1A27E000BACC6 = {
+			isa = PBXGroup;
+			children = (
+				4899223A28C1A27E000BACC6 /* Exitek iOS Task */,
+				4899223928C1A27E000BACC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4899223928C1A27E000BACC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4899223828C1A27E000BACC6 /* Exitek iOS Task.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4899223A28C1A27E000BACC6 /* Exitek iOS Task */ = {
+			isa = PBXGroup;
+			children = (
+				4899225F28C1B028000BACC6 /* Protocols */,
+				4899225C28C1AF88000BACC6 /* Managers */,
+				4899225A28C1AB58000BACC6 /* Models */,
+				4899223B28C1A27E000BACC6 /* AppDelegate.swift */,
+				4899223D28C1A27E000BACC6 /* SceneDelegate.swift */,
+				4899223F28C1A27E000BACC6 /* ViewController.swift */,
+				4899224128C1A27E000BACC6 /* Main.storyboard */,
+				4899224428C1A280000BACC6 /* Assets.xcassets */,
+				4899224628C1A280000BACC6 /* LaunchScreen.storyboard */,
+				4899225328C1A9C0000BACC6 /* MobileBD.xcdatamodeld */,
+				4899224928C1A280000BACC6 /* Info.plist */,
+			);
+			path = "Exitek iOS Task";
+			sourceTree = "<group>";
+		};
+		4899225A28C1AB58000BACC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4899225B28C1AB6C000BACC6 /* Mobile */,
+				4899226628C753B7000BACC6 /* Mobile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4899225B28C1AB6C000BACC6 /* Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				4899225628C1AB34000BACC6 /* MobileBD+CoreDataClass.swift */,
+				4899225728C1AB34000BACC6 /* MobileBD+CoreDataProperties.swift */,
+			);
+			path = Mobile;
+			sourceTree = "<group>";
+		};
+		4899225C28C1AF88000BACC6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4899225D28C1AF9A000BACC6 /* CoreDataManager.swift */,
+				4899226228C5FF62000BACC6 /* MobileError.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4899225F28C1B028000BACC6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4899225128C1A305000BACC6 /* MobileStorageProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4899223728C1A27E000BACC6 /* Exitek iOS Task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4899224C28C1A280000BACC6 /* Build configuration list for PBXNativeTarget "Exitek iOS Task" */;
+			buildPhases = (
+				4899223428C1A27E000BACC6 /* Sources */,
+				4899223528C1A27E000BACC6 /* Frameworks */,
+				4899223628C1A27E000BACC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Exitek iOS Task";
+			productName = "Exitek iOS Task";
+			productReference = 4899223828C1A27E000BACC6 /* Exitek iOS Task.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4899223028C1A27E000BACC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4899223728C1A27E000BACC6 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4899223328C1A27E000BACC6 /* Build configuration list for PBXProject "Exitek iOS Task" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4899222F28C1A27E000BACC6;
+			productRefGroup = 4899223928C1A27E000BACC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4899223728C1A27E000BACC6 /* Exitek iOS Task */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4899223628C1A27E000BACC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4899224828C1A280000BACC6 /* LaunchScreen.storyboard in Resources */,
+				4899224528C1A280000BACC6 /* Assets.xcassets in Resources */,
+				4899224328C1A27E000BACC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4899223428C1A27E000BACC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4899224028C1A27E000BACC6 /* ViewController.swift in Sources */,
+				4899225528C1A9C0000BACC6 /* MobileBD.xcdatamodeld in Sources */,
+				4899225828C1AB34000BACC6 /* MobileBD+CoreDataClass.swift in Sources */,
+				4899223C28C1A27E000BACC6 /* AppDelegate.swift in Sources */,
+				4899223E28C1A27E000BACC6 /* SceneDelegate.swift in Sources */,
+				4899226728C753B7000BACC6 /* Mobile.swift in Sources */,
+				4899226328C5FF62000BACC6 /* MobileError.swift in Sources */,
+				4899225E28C1AF9A000BACC6 /* CoreDataManager.swift in Sources */,
+				4899225228C1A305000BACC6 /* MobileStorageProtocol.swift in Sources */,
+				4899225928C1AB34000BACC6 /* MobileBD+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4899224128C1A27E000BACC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4899224228C1A27E000BACC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4899224628C1A280000BACC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4899224728C1A280000BACC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4899224A28C1A280000BACC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4899224B28C1A280000BACC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4899224D28C1A280000BACC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3557QUJ6JD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exitek iOS Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.Home.Exitek-iOS-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4899224E28C1A280000BACC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3557QUJ6JD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exitek iOS Task/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.Home.Exitek-iOS-Task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4899223328C1A27E000BACC6 /* Build configuration list for PBXProject "Exitek iOS Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4899224A28C1A280000BACC6 /* Debug */,
+				4899224B28C1A280000BACC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4899224C28C1A280000BACC6 /* Build configuration list for PBXNativeTarget "Exitek iOS Task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4899224D28C1A280000BACC6 /* Debug */,
+				4899224E28C1A280000BACC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4899225328C1A9C0000BACC6 /* MobileBD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4899225428C1A9C0000BACC6 /* MobileStorageBD.xcdatamodel */,
+			);
+			currentVersion = 4899225428C1A9C0000BACC6 /* MobileStorageBD.xcdatamodel */;
+			path = MobileBD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4899223028C1A27E000BACC6 /* Project object */;
+}
