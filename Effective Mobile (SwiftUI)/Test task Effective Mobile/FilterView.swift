@@ -180,3 +180,10 @@ struct FilterView: View {
         .cornerRadius(30)
     }
 }
+
+struct FilterView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeStoreView()
+            .environmentObject(NetworkServiceManager())
+    }
+}

@@ -16,32 +16,47 @@ struct HomeStoreView: View {
         CategoryImage(image: "", text: "")]
     @State private var search: String = ""
     @State private var isActiveFilterView: Bool = false
+    @State private var isActiveDitailsPriductView: Bool = true
+    @State private var selectedIndex: Int = 0
     @EnvironmentObject var networkServiceManager: NetworkServiceManager
     
     var body: some View {
-        ZStack {
-            Color("bg")
-                .ignoresSafeArea()
-            
-            VStack {
-                NaviganionBarView(isActive: $isActiveFilterView)
+        if !isActiveDitailsPriductView {
+            ZStack {
+                Color("bg")
                 
-                CategoryScrollView(categories: category)
-                
-                SearchProductView(search: $search)
-                
-                HotSalesScrollView(shopModels: networkServiceManager.shopModels)
+                VStack(spacing: 0) {
+                    NaviganionBarView(isActive: $isActiveFilterView)
+                    
+                    CategoryScrollView(categories: category)
+                    
+                    SearchProductView(search: $search)
+                    
+                    HotSalesScrollView(shopModels: networkServiceManager.shopModels.first?.homeStore ?? [])
+                    
+                    Spacer()
+                    
+                    if !isActiveFilterView {
+                        BestSellerScrolView(isActiveDetailsView: $isActiveDitailsPriductView, shopModels: networkServiceManager.shopModels.first?.bestSeller ?? [])
+                    } else {
+                        FilterView(isActive: $isActiveFilterView)
+                    }
+                }
+                .frame(width: 414)
+                .padding(.top, 45)
                 
                 if !isActiveFilterView {
-                    BestSellerScrolView(shopModels: networkServiceManager.shopModels)
-                } else {
-                    FilterView(isActive: $isActiveFilterView)
+                    VStack {
+                        Spacer()
+                        
+                        TabBarView()
+                            .zIndex(1)
+                    }
                 }
-                
-                Spacer()
             }
-            .padding(.top, 45)
             .ignoresSafeArea()
+        } else {
+            DetailsProductView(isActiveView: $isActiveDitailsPriductView, detailsModels: networkServiceManager.detailsModels)
         }
     }
 }
@@ -55,6 +70,7 @@ struct HomeStoreView_Previews: PreviewProvider {
 
 struct NaviganionBarView: View {
     @Binding var isActive: Bool
+    
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -193,7 +209,7 @@ struct SearchProductView: View {
 
 struct HotSalesScrollView: View {
     @State private var selectedIndex = 0
-    let shopModels: [ShopModel]
+    let shopModels: [HomeStore]
 
     var body: some View {
             VStack {
@@ -215,19 +231,19 @@ struct HotSalesScrollView: View {
                         
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 21) {
-                            ForEach(0 ..< (shopModels.first?.homeStore.count ?? 0)) { index in
+                            ForEach(0 ..< shopModels.count) { index in
                                 HotSaleView(isActive: selectedIndex == index,
-                                            isNew: shopModels.first?.homeStore[index].isNew ?? false,
-                                            title: shopModels.first?.homeStore[index].title ?? "",
-                                            subtitle: shopModels.first?.homeStore[index].subtitle ?? "",
-                                             image: shopModels.first?.homeStore[index].picture ?? "")
+                                            isNew: shopModels[index].isNew ?? false,
+                                            title: shopModels[index].title ?? "",
+                                            subtitle: shopModels[index].subtitle ?? "",
+                                             image: shopModels[index].picture ?? "")
                                 .onTapGesture {
                                     selectedIndex = index
                                 }
                             }
                         }
                     }
-                    .padding(.horizontal, 15)
+                    .padding(.horizontal, 25)
                 }
                 .padding(.top, 10)
             }
@@ -250,8 +266,9 @@ struct HotSaleView: View {
                     if let image = imageUrl.image {
                         image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .scaledToFill()
                             .frame(width: 360, height: 182)
+                            .clipped()
                     }
                 }
         
@@ -300,14 +317,20 @@ struct HotSaleView: View {
                 .padding(.leading, 25)
             }
             .frame(width: 360, height: 182)
+            .overlay(
+                RoundedRectangle (cornerRadius: 10)
+                    .stroke(lineWidth: 0.5)
+            )
             .cornerRadius(10)
+            .shadow(radius: 5)
         }
     }
 }
 
 struct BestSellerScrolView: View {
+    @Binding var isActiveDetailsView: Bool
     @State private var selectedIndex = 0
-    let shopModels: [ShopModel]
+    let shopModels: [BestSeller]
     let columns = [GridItem(.flexible()),
                   GridItem(.flexible())]
     
@@ -332,11 +355,13 @@ struct BestSellerScrolView: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVGrid(columns: columns, spacing: 8) {
-                        ForEach(0 ..< (shopModels.first?.bestSeller.count ?? 0)) { index in
+                        ForEach(0 ..< shopModels.count) { index in
                             VStack {
-                                BestSellerView(isActive: selectedIndex == index, isFavorites: shopModels.first?.bestSeller[index].isFavorites ?? false, title: shopModels.first?.bestSeller[index].title ?? "", image: shopModels.first?.bestSeller[index].picture ?? "", priceWithoutDiscount: shopModels.first?.bestSeller[index].priceWithoutDiscount ?? 0, discountPrice: shopModels.first?.bestSeller[index].discountPrice ?? 0)
+                                BestSellerView(isActive: selectedIndex == index, isFavorites: shopModels[index].isFavorites ?? false, title: shopModels[index].title ?? "", image: shopModels[index].picture ?? "", priceWithoutDiscount: shopModels[index].priceWithoutDiscount ?? 0, discountPrice: shopModels[index].discountPrice ?? 0)
                                 .onTapGesture {
                                     selectedIndex = index
+                                    isActiveDetailsView.toggle()
+                                    
                                 }
                             }
                         }
@@ -366,8 +391,9 @@ struct BestSellerView: View {
                     if let image = imageUrl.image {
                         image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .scaledToFill()
                             .frame(width: 175, height: 177)
+                            .clipped()
                             .padding(.bottom, 55)
                     }
                 }
@@ -415,6 +441,11 @@ struct BestSellerView: View {
             }
             .frame(width: 175, height: 227)
             .cornerRadius(10)
+            .overlay(
+                RoundedRectangle (cornerRadius: 10)
+                    .stroke(lineWidth: 0.5)
+            )
+            .shadow(radius: 5)
         }
     }
 }

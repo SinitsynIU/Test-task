@@ -28,7 +28,9 @@ struct LoadingView: View {
             .ignoresSafeArea()
             .task {
                 networkServiceManager.getData {
-                    self.isActive = true
+                    networkServiceManager.getProductDetails {
+                        self.isActive = true
+                    }
                 }
             }
             .onAppear {
